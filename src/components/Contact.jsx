@@ -87,7 +87,10 @@ export default function Contact() {
             >
               <span>←</span> Close Form
             </button>
-            <form className="space-y-6 bg-white p-8 border border-black/10 shadow-xl" action="https://formspree.io/f/ganti_kode_formspree_disini" method="POST">
+            <form action="https://api.web3forms.com/submit" method="POST" className="space-y-6 bg-white p-8 border border-black/10 shadow-xl">
+              {/* MASUKKAN ACCESS KEY WEB3FORMS KAMU DI SINI */}
+              <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+
               <div className="flex flex-col md:flex-row gap-6">
                 <div className="flex-1 space-y-2">
                   <label className="font-fjalla text-sm uppercase tracking-widest text-gray-500">Name</label>
