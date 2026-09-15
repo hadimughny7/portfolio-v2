@@ -87,10 +87,7 @@ export default function Contact() {
             >
               <span>←</span> Close Form
             </button>
-            <form action="https://api.web3forms.com/submit" method="POST" className="space-y-6 bg-white p-8 border border-black/10 shadow-xl">
-              {/* MASUKKAN ACCESS KEY WEB3FORMS KAMU DI SINI */}
-              <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
-
+            <form onSubmit={onSubmit} className="space-y-6 bg-white p-8 border border-black/10 shadow-xl">
               <div className="flex flex-col md:flex-row gap-6">
                 <div className="flex-1 space-y-2">
                   <label className="font-fjalla text-sm uppercase tracking-widest text-gray-500">Name</label>
@@ -114,11 +111,13 @@ export default function Contact() {
                 <div className="absolute inset-0 bg-yellow-500 transform scale-y-0 origin-bottom group-hover:scale-y-100 transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] z-0"></div>
 
                 <span className="relative z-10 flex items-center justify-center gap-2 group-hover:text-black transition-colors duration-500">
-                  Send Message
-                  <div className="relative overflow-hidden flex items-center justify-center w-5 h-5 text-yellow-500 group-hover:text-black transition-colors duration-500">
-                    <span className="absolute transform transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:translate-x-[150%]">→</span>
-                    <span className="absolute transform transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] -translate-x-[150%] group-hover:translate-x-0">→</span>
-                  </div>
+                  {result ? result : "Send Message"}
+                  {!result && (
+                    <div className="relative overflow-hidden flex items-center justify-center w-5 h-5 text-yellow-500 group-hover:text-black transition-colors duration-500">
+                      <span className="absolute transform transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:translate-x-[150%]">→</span>
+                      <span className="absolute transform transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] -translate-x-[150%] group-hover:translate-x-0">→</span>
+                    </div>
+                  )}
                 </span>
               </button>
             </form>
