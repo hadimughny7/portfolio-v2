@@ -51,7 +51,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="font-fjalla text-[clamp(1.5rem,4.5vw,5rem)] leading-[0.85] tracking-tight uppercase text-cream/90 mt-4 md:mt-2 whitespace-nowrap"
         >
-          Fullstack Web Developer
+          Full Stack Developer
         </motion.h2>
 
         <motion.div 
