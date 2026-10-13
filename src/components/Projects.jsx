@@ -81,9 +81,9 @@ export default function Projects() {
           {projects.map((project, idx) => (
             <div 
               key={project.id}
-              className="project-card sticky flex flex-col md:flex-row-reverse gap-8 md:gap-16 items-center bg-white p-6 md:p-10 rounded-[2.5rem] shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-black/10"
+              className="project-card relative top-auto flex flex-col md:sticky md:top-[var(--project-sticky-top)] md:flex-row-reverse gap-8 md:gap-16 items-center bg-white p-6 md:p-10 rounded-[2.5rem] shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-black/10"
               style={{
-                top: `calc(10vh + ${idx * 40}px)`,
+                '--project-sticky-top': `calc(10vh + ${idx * 40}px)`,
                 zIndex: idx + 10
               }}
             >
