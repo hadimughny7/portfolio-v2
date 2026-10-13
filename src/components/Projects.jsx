@@ -71,13 +71,13 @@ export default function Projects() {
   }, [])
 
   return (
-    <section id="projects" ref={container} className="py-32 bg-cream text-jetBlack px-6">
+    <section id="projects" ref={container} className="py-20 md:py-32 bg-cream text-jetBlack px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-center font-fjalla text-[clamp(2.5rem,8vw,5rem)] uppercase mb-24">
+        <h2 className="text-center font-fjalla text-[clamp(2.5rem,8vw,5rem)] uppercase mb-14 md:mb-24">
           Selected <span className="text-yellow-600 font-inter font-light tracking-tight capitalize italic">Projects</span>
         </h2>
 
-        <div className="flex flex-col gap-24 pb-32 md:gap-40">
+        <div className="flex flex-col gap-16 pb-0 md:gap-40 md:pb-32">
           {projects.map((project, idx) => (
             <div 
               key={project.id}

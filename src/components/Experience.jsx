@@ -69,7 +69,7 @@ export default function Experience() {
   }, [])
 
   return (
-    <section id="experience" ref={container} className="py-32 bg-cream text-jetBlack px-6 border-t border-black/10">
+    <section id="experience" ref={container} className="py-20 md:py-32 bg-cream text-jetBlack px-6 border-t border-black/10">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12">
         {/* Left Col - Title */}
         <div className="w-full md:w-1/3">

@@ -22,7 +22,7 @@ export default function Philosophy() {
   }, [])
 
   return (
-    <section ref={container} className="py-32 bg-cream text-jetBlack px-6 text-center border-t border-black/10">
+    <section ref={container} className="py-20 md:py-32 bg-cream text-jetBlack px-6 text-center border-t border-black/10">
       <div className="max-w-4xl mx-auto philosophy-quote">
         <blockquote className="font-fjalla text-[clamp(2rem,6vw,4rem)] leading-tight tracking-tight uppercase mb-10">
           "I'm not just here to make things <span className="text-yellow-600">work</span> — I want to create experiences that people <span className="text-yellow-600">remember.</span>"

@@ -50,9 +50,9 @@ export default function Contact() {
   }, [])
 
   return (
-    <section id="contact" ref={container} className="relative pt-32 pb-8 bg-cream text-jetBlack px-6 overflow-hidden">
+    <section id="contact" ref={container} className="relative pt-20 md:pt-32 pb-8 bg-cream text-jetBlack px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto min-h-[500px]">
-        <h2 className="font-fjalla text-[clamp(3rem,10vw,6rem)] leading-[0.85] uppercase tracking-tight mb-20">
+        <h2 className="font-fjalla text-[clamp(3rem,10vw,6rem)] leading-[0.85] uppercase tracking-tight mb-12 md:mb-20">
           <div className="overflow-hidden contact-title">
             <span className="inline-block">Get In </span>
             <span className="inline-block text-yellow-600 ml-4">Touch</span>

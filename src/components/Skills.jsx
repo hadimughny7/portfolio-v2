@@ -115,9 +115,9 @@ export default function Skills() {
   }, [])
 
   return (
-    <section id="skills" ref={container} className="py-32 bg-cream text-jetBlack px-6 border-t border-black/10 overflow-hidden">
+    <section id="skills" ref={container} className="py-20 md:py-32 bg-cream text-jetBlack px-6 border-t border-black/10 overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-24">
+        <div className="text-center mb-14 md:mb-24">
           <h2 className="font-fjalla text-[clamp(4rem,10vw,8rem)] uppercase tracking-tight">
             What I Use
           </h2>
