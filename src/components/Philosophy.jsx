@@ -1,24 +1,27 @@
 import { useEffect, useRef } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { gsap } from '../lib/gsap'
 
 export default function Philosophy() {
   const container = useRef(null)
 
   useEffect(() => {
-    gsap.fromTo('.philosophy-quote',
-      { y: 50, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: container.current,
-          start: 'top 80%',
+    const context = gsap.context(() => {
+      gsap.fromTo('.philosophy-quote',
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: container.current,
+            start: 'top 80%',
+          }
         }
-      }
-    )
+      )
+    }, container)
+
+    return () => context.revert()
   }, [])
 
   return (

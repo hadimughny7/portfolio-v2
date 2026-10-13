@@ -1,5 +1,3 @@
-import { useEffect } from 'react'
-import Lenis from 'lenis'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Marquee from './components/Marquee'
@@ -9,32 +7,10 @@ import Skills from './components/Skills'
 import Philosophy from './components/Philosophy'
 import Contact from './components/Contact'
 import CustomCursor from './components/CustomCursor'
+import { useSmoothScroll } from './hooks/useSmoothScroll'
 
 function App() {
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
-      direction: 'vertical',
-      gestureDirection: 'vertical',
-      smooth: true,
-      mouseMultiplier: 1,
-      smoothTouch: false,
-      touchMultiplier: 2,
-      infinite: false,
-    })
-
-    function raf(time) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
-
-    requestAnimationFrame(raf)
-
-    return () => {
-      lenis.destroy()
-    }
-  }, [])
+  useSmoothScroll()
 
   return (
     <div className="bg-cream min-h-screen text-jetBlack font-inter">

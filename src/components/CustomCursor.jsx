@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react'
 import { motion, useSpring, useMotionValue } from 'framer-motion'
 
+const springConfig = { damping: 25, stiffness: 400, mass: 0.2 }
+
 export default function CustomCursor() {
   const [isHovered, setIsHovered] = useState(false)
-  const [isPointer, setIsPointer] = useState(false)
+  const [isPointer] = useState(() => !window.matchMedia('(pointer: coarse)').matches)
   
   const mouseX = useMotionValue(-100)
   const mouseY = useMotionValue(-100)
   
-  const springConfig = { damping: 25, stiffness: 400, mass: 0.2 }
   const cursorX = useSpring(mouseX, springConfig)
   const cursorY = useSpring(mouseY, springConfig)
 
@@ -17,8 +18,6 @@ export default function CustomCursor() {
     if (window.matchMedia('(pointer: coarse)').matches) {
       return
     }
-    setIsPointer(true)
-
     const moveCursor = (e) => {
       mouseX.set(e.clientX)
       mouseY.set(e.clientY)

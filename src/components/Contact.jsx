@@ -1,7 +1,6 @@
 import { useRef, useEffect, useState } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { motion, AnimatePresence } from 'framer-motion'
+import { gsap } from '../lib/gsap'
 
 export default function Contact() {
   const container = useRef(null)
@@ -28,25 +27,29 @@ export default function Contact() {
       } else {
         setResult(data.message)
       }
-    } catch (error) {
+    } catch {
       setResult("Something went wrong!")
     }
   }
   useEffect(() => {
-    gsap.fromTo('.contact-title span',
-      { y: 100, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        stagger: 0.1,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: container.current,
-          start: 'top 80%',
+    const context = gsap.context(() => {
+      gsap.fromTo('.contact-title span',
+        { y: 100, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          stagger: 0.1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: container.current,
+            start: 'top 80%',
+          }
         }
-      }
-    )
+      )
+    }, container)
+
+    return () => context.revert()
   }, [])
 
   return (

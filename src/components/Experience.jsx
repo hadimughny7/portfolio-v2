@@ -1,71 +1,41 @@
 import { useRef, useEffect } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
-const experiences = [
-  {
-    id: "01",
-    role: "FRONTEND WEB DEVELOPER",
-    company: "Inndivo.com",
-    period: "Apr 2025 — Nov 2025",
-    desc: "Developed a company profile website and an internal online training platform (Inndivo University) using React.js, TypeScript, and Tailwind CSS, with interactive features, responsive design, and API integration.",
-    tech: ["REACT.JS", "TYPESCRIPT", "TAILWIND"]
-  },
-  {
-    id: "02",
-    role: "WEB DEVELOPER INTERNSHIP",
-    company: "Syaamil Group",
-    period: "Jan 2025 — Apr 2025",
-    desc: "Built the Qubba Foundation and Wisata Qur'an websites using WordPress with custom CSS and JavaScript for a foundation owned by PT Syaamil Qur'an.",
-    tech: ["WORDPRESS", "CSS", "JAVASCRIPT"]
-  },
-  {
-    id: "03",
-    role: "INDEPENDENT STUDY (CAPSTONE)",
-    company: "LearningX (MSIB Batch 7)",
-    period: "Sep 2024 — Dec 2024",
-    desc: "Developed a web-based food ordering application (Sweet Dessert e-commerce) using HTML, CSS, JavaScript, Bootstrap, Python Flask, and MongoDB.",
-    tech: ["JAVASCRIPT", "PYTHON FLASK", "MONGODB"]
-  },
-  {
-    id: "04",
-    role: "JR. WEB DEVELOPER INTERNSHIP",
-    company: "CV IDS Kejar ID",
-    period: "Mar 2021 — Jun 2021",
-    desc: "Built the website interface and developed the required features using the PHP programming language and the Laravel framework.",
-    tech: ["PHP", "LARAVEL"]
-  }
-]
+import { experiences } from '../data/experience'
+import { gsap, ScrollTrigger } from '../lib/gsap'
 
 export default function Experience() {
   const container = useRef(null)
 
   useEffect(() => {
-    const items = gsap.utils.toArray('.exp-item')
-    items.forEach((item, i) => {
-      // Entrance animation
-      gsap.fromTo(item, 
-        { y: 50, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.8,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: item,
-            start: 'top 85%',
-          }
-        }
-      )
+    const context = gsap.context(() => {
+      const items = gsap.utils.toArray('.exp-item', container.current)
 
-      // Active state highlight when scrolling into center
-      ScrollTrigger.create({
-        trigger: item,
-        start: 'top 55%',
-        end: 'bottom 55%',
-        toggleClass: 'is-active',
+      items.forEach((item) => {
+        // Entrance animation
+        gsap.fromTo(item,
+          { y: 50, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: item,
+              start: 'top 85%',
+            }
+          }
+        )
+
+        // Active state highlight when scrolling into center
+        ScrollTrigger.create({
+          trigger: item,
+          start: 'top 55%',
+          end: 'bottom 55%',
+          toggleClass: 'is-active',
+        })
       })
-    })
+    }, container)
+
+    return () => context.revert()
   }, [])
 
   return (
@@ -86,8 +56,8 @@ export default function Experience() {
           <div className="hidden md:block absolute left-[5px] top-0 bottom-0 w-[2px] bg-black/10"></div>
 
           <div className="flex flex-col gap-6">
-            {experiences.map((exp, idx) => (
-              <div key={idx} className="exp-item group relative md:pl-12">
+            {experiences.map((exp) => (
+              <div key={exp.id} className="exp-item group relative md:pl-12">
                 
                 {/* Circle marker on line */}
                 <div className="hidden md:block absolute left-[-1px] top-12 w-3.5 h-3.5 rounded-full border-[3px] border-black bg-cream z-20 group-[.is-active]:border-yellow-500 group-[.is-active]:bg-jetBlack transition-colors duration-500"></div>
@@ -119,8 +89,8 @@ export default function Experience() {
                     </p>
 
                     <div className="flex flex-wrap gap-2">
-                      {exp.tech.map((t, i) => (
-                        <span key={i} className="px-4 py-1.5 rounded-full border border-black/10 bg-black/5 text-[0.65rem] md:text-xs font-bold uppercase tracking-wider group-[.is-active]:bg-white/10 group-[.is-active]:border-white/20 group-[.is-active]:text-cream transition-colors duration-500">
+                      {exp.tech.map((t) => (
+                        <span key={t} className="px-4 py-1.5 rounded-full border border-black/10 bg-black/5 text-[0.65rem] md:text-xs font-bold uppercase tracking-wider group-[.is-active]:bg-white/10 group-[.is-active]:border-white/20 group-[.is-active]:text-cream transition-colors duration-500">
                           {t}
                         </span>
                       ))}

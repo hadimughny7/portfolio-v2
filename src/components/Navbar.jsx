@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { navLinks } from '../data/navigation'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -14,14 +15,6 @@ export default function Navbar() {
       document.body.style.overflow = ''
     }
   }, [isOpen])
-
-  const navLinks = [
-    { name: 'Home', href: '#' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Contact', href: '#contact' },
-  ]
 
   return (
     <>
@@ -48,7 +41,7 @@ export default function Navbar() {
       >
         <ul className="flex flex-col items-center justify-center w-full h-full gap-4 sm:gap-6 md:gap-8 px-6">
           {navLinks.map((link, i) => (
-            <li key={i} className="shrink-0">
+            <li key={link.href} className="shrink-0">
               <a 
                 href={link.href} 
                 onClick={(e) => {
