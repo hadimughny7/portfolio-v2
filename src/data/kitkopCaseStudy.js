@@ -7,6 +7,7 @@ export const kitkopCaseStudy = {
     'An end-to-end digital transformation of Cafe Kitkop’s ordering, cashier, kitchen, inventory, and reporting workflows — analyzed from on-site observation and stakeholder interviews, modeled in UML, structured into a 12-table normalized database, validated with 29 black-box test cases, and deployed to production.',
   repoUrl: 'https://github.com/hadimughny7/kitkop-web-app',
   heroImage: '/img/kitkop-1.png',
+  motionVideo: '/video/kitkop-motion.mp4',
   metrics: [
     { value: '5', label: 'Business Problems Solved' },
     { value: '6', label: 'Actors & 5 Use Cases' },

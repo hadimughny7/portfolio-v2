@@ -460,6 +460,37 @@ export default function KitkopDetail() {
           </div>
         </section>
 
+        {/* Motion Graphic Showcase */}
+        <section className="velocity-plane will-change-transform">
+          <div className="mb-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-widest text-yellow-700 mb-3">/ Motion Graphic</p>
+              <h2 className="font-fjalla text-4xl md:text-5xl uppercase tracking-tight">
+                System Walkthrough
+              </h2>
+            </div>
+            <p className="text-sm text-gray-500 max-w-md leading-relaxed">
+              A brief motion overview of how Cafe Kitkop connects QR table ordering, kitchen updates, and automated stock tracking.
+            </p>
+          </div>
+
+          <div className="bg-white p-4 md:p-6 rounded-[2.5rem] border border-black/10 shadow-[0_24px_60px_-18px_rgba(0,0,0,0.12)]">
+            <div className="relative overflow-hidden rounded-3xl bg-jetBlack">
+              <video
+                src={kitkopCaseStudy.motionVideo}
+                poster={kitkopCaseStudy.heroImage}
+                controls
+                playsInline
+                preload="metadata"
+                onLoadedMetadata={() => ScrollTrigger.refresh()}
+                className="w-full max-h-[72vh] object-contain mx-auto block"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </section>
+
         {/* 01. Requirements & As-Is / To-Be Analysis */}
         <section className="velocity-plane will-change-transform">
           <div className="mb-10">
