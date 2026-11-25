@@ -14,7 +14,7 @@ export const projects = [
       { title: 'Data Integrity & Audit Logs', detail: 'Version locking rejects conflicting updates with HTTP 409, while permanent audit logs preserve full traceability.' },
       { title: 'Lightweight API Architecture', detail: 'Bun and Hono power a modular REST backend engineered for low latency and minimal memory overhead.' },
     ],
-    link: 'https://nodewave-frontend-plum.vercel.app/login',
+    link: 'https://nodewave-frontend-plum.vercel.app/',
     linkLabel: 'Open Live Demo',
   },
   {
