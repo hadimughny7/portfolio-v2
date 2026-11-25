@@ -51,7 +51,7 @@ export default function Projects() {
               <div className="w-full md:w-1/2 group overflow-hidden bg-black/5 flex items-center justify-center p-6 md:p-10 rounded-3xl">
                 {project.highlights ? (
                   <div className="w-full">
-                    <p className="font-fjalla text-2xl uppercase mb-5">Engineering Highlights</p>
+                    <p className="font-fjalla text-2xl uppercase mb-5">System & Engineering Highlights</p>
                     <ul className="grid grid-cols-1 gap-x-6 gap-y-4 xl:grid-cols-2">
                       {project.highlights.map((highlight, index) => (
                         <li key={highlight.title} className="border-t border-black/10 pt-4">

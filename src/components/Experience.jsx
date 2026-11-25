@@ -46,7 +46,7 @@ export default function Experience() {
           <p className="font-inter font-bold text-xs uppercase tracking-widest mb-6">/ Experience</p>
           <h2 className="font-fjalla text-6xl md:text-[5.5rem] leading-[0.85] uppercase tracking-tight">Experience</h2>
           <p className="font-inter text-gray-500 mt-6 max-w-sm">
-            A collection of places, projects and experiences that shaped the way I build for the web.
+            A collection of roles, projects, and leadership experiences that shaped how I analyze business processes and build digital solutions.
           </p>
         </div>
 

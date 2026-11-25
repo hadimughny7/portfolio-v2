@@ -51,7 +51,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="font-fjalla text-[clamp(1.5rem,4.5vw,5rem)] leading-[0.85] tracking-tight uppercase text-cream/90 mt-4 md:mt-2 whitespace-nowrap"
         >
-          Full Stack Developer
+          System Analyst & Developer
         </motion.h2>
 
         <motion.div 
@@ -61,7 +61,7 @@ export default function Hero() {
           className="mt-12 max-w-2xl mx-auto"
         >
           <p className="font-inter text-cream/80 text-sm md:text-base mb-10 leading-relaxed">
-            Information Systems fresh graduate from Universitas Komputer Indonesia with a passion for building modern, responsive, and interactive web experiences — from front-end interfaces to back-end architectures.
+            Information Systems graduate (GPA 3.78/4.00) from Universitas Komputer Indonesia who turns business problems into working digital solutions — combining requirements analysis, UML system modeling, and database normalization with full-stack web development.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12">

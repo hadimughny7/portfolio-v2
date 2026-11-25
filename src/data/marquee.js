@@ -1,10 +1,10 @@
 export const marqueeItems = [
-  'Interactive Experiences',
-  'Smooth Animations',
-  'Responsive Design',
-  'Modern Web Development',
-  'Creative Solutions',
-  'Interactive Experiences',
-  'Smooth Animations',
-  'Responsive Design',
+  'System Analysis & Modeling',
+  'Requirements Gathering',
+  'UML & Database Design',
+  'Full-Stack Development',
+  'Black-Box Testing',
+  'System Analysis & Modeling',
+  'Requirements Gathering',
+  'Full-Stack Development',
 ]

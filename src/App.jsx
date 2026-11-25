@@ -7,10 +7,25 @@ import Skills from './components/Skills'
 import Philosophy from './components/Philosophy'
 import Contact from './components/Contact'
 import CustomCursor from './components/CustomCursor'
+import KitkopDetail from './components/KitkopDetail'
 import { useSmoothScroll } from './hooks/useSmoothScroll'
 
 function App() {
   useSmoothScroll()
+
+  const pathname = window.location.pathname.replace(/\/+$/, '')
+  const searchParams = new URLSearchParams(window.location.search)
+  const isKitkopDetail =
+    pathname === '/projects/kitkop' || searchParams.get('project') === 'kitkop'
+
+  if (isKitkopDetail) {
+    return (
+      <div className="bg-cream min-h-screen text-jetBlack font-inter">
+        <CustomCursor />
+        <KitkopDetail />
+      </div>
+    )
+  }
 
   return (
     <div className="bg-cream min-h-screen text-jetBlack font-inter">
@@ -30,4 +45,3 @@ function App() {
 }
 
 export default App
-
