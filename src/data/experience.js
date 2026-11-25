@@ -1,6 +1,14 @@
 export const experiences = [
   {
     id: '01',
+    role: 'FULL-STACK DEVELOPER',
+    company: 'DISDIK Kabupaten Bandung Barat',
+    period: 'Aug 2025 — Sep 2026',
+    desc: 'Developed a periodic salary increment feature for teachers using Laravel and MySQL to support personnel data management and salary adjustment workflows. Built a latest-updates module to streamline announcement delivery for teachers, and designed an interactive, responsive dashboard interface with Bootstrap to improve navigation and user experience.',
+    tech: ['LARAVEL', 'MYSQL', 'BOOTSTRAP'],
+  },
+  {
+    id: '02',
     role: 'FRONTEND WEB DEVELOPER',
     company: 'Inndivo.com, Bandung',
     period: 'Apr 2025 — Nov 2025',
@@ -8,7 +16,7 @@ export const experiences = [
     tech: ['REACT.JS', 'TYPESCRIPT', 'TAILWIND CSS', 'REST API'],
   },
   {
-    id: '02',
+    id: '03',
     role: 'WEB DEVELOPER INTERN',
     company: 'Syaamil Group, Bandung',
     period: 'Jan 2025 — Apr 2025',
@@ -16,7 +24,7 @@ export const experiences = [
     tech: ['WORDPRESS', 'CUSTOM CSS', 'JAVASCRIPT'],
   },
   {
-    id: '03',
+    id: '04',
     role: 'FULL-STACK DEVELOPER',
     company: 'LearningX / PT Global Investment Institusi',
     period: 'Sep 2024 — Dec 2024',
@@ -24,7 +32,7 @@ export const experiences = [
     tech: ['PYTHON', 'REST API', 'MONGODB', 'INTERFACE DESIGN'],
   },
   {
-    id: '04',
+    id: '05',
     role: 'VICE HEAD, TALENT & COMPETITION',
     company: 'Information Systems Student Association',
     period: 'Mar 2023 — Nov 2024',
@@ -32,7 +40,7 @@ export const experiences = [
     tech: ['STAKEHOLDER COORDINATION', 'PROGRAM PLANNING', 'TEAM LEADERSHIP'],
   },
   {
-    id: '05',
+    id: '06',
     role: 'JUNIOR WEB DEVELOPER INTERN',
     company: 'CV IDS Kejar ID, Bogor',
     period: 'Mar 2021 — Jun 2021',
